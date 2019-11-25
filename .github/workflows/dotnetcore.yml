@@ -15,10 +15,6 @@ jobs:
         dotnet-version: 3.0.100
     - name: Build 
       run: dotnet build --configuration Release
-    - name: Test C#
-      run: dotnet test ./tst/Random.CSharp.Tests/Random.CSharp.Tests.csproj
-    - name: Test F#
-      run: dotnet test ./tst/Random.Tests/Random.Tests.fsproj
     - name: Build C# NuGet Package
       run: 
         dotnet pack ./src/Random.CSharp/Random.CSharp.csproj --configuration Release -o ./nuget
