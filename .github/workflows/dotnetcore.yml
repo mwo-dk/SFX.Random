@@ -21,10 +21,10 @@ jobs:
     - name: Build F# Nuget Package
       run:
         dotnet pack ./src/Random/Random.fsproj --configuration Release -o ./nuget
-    - name: Deplo C# NuGet Package
+    - name: Deploy C# NuGet Package
       run: 
         dotnet nuget push /home/runner/work/SFX.Random/SFX.Random/nuget/SFX.Random.CSharp.1.0.0.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
-    - name: Deplo F# NuGet Package
+    - name: Deploy F# NuGet Package
       run:  
         dotnet nuget push /home/runner/work/SFX.Random/SFX.Random/nuget/SFX.Random.1.0.0.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
 
