@@ -20,57 +20,57 @@ namespace SFX.Random.CSharp
         /// Generates a random <see cref="byte"/>
         /// </summary>
         /// <returns></returns>
-        public static sbyte GetRandomSignedByte() => CreateRandom(8, x => (sbyte)x[0]);
+        public static sbyte GetRandomSignedByte() => CreateRandom(x => (sbyte)x[0]);
         /// <summary>
         /// Generates a random <see cref="char"/>
         /// </summary>
         /// <returns></returns>
-        public static char GetRandomChar() => CreateRandom(8, x => BitConverter.ToChar(x, 0));
+        public static char GetRandomChar() => CreateRandom(x => BitConverter.ToChar(x, 0));
         /// <summary>
         /// Generates a random <see cref="short"/>
         /// </summary>
         /// <returns></returns>
-        public static short GetRandomShort() =>  CreateRandom(8, x => BitConverter.ToInt16(x, 0));
+        public static short GetRandomShort() =>  CreateRandom(x => BitConverter.ToInt16(x, 0));
         /// <summary>
         /// Generates a random <see cref="int"/>
         /// </summary>
         /// <returns></returns>
-        public static int GetRandomInt() => CreateRandom(8, x => BitConverter.ToInt32(x, 0));
+        public static int GetRandomInt() => CreateRandom(x => BitConverter.ToInt32(x, 0));
         /// <summary>
         /// Generates a random <see cref="long"/>
         /// </summary>
         /// <returns></returns>
-        public static long GetRandomLong() => CreateRandom(8, x => BitConverter.ToInt64(x, 0));
+        public static long GetRandomLong() => CreateRandom(x => BitConverter.ToInt64(x, 0));
         /// <summary>
         /// Generates a random <see cref="byte"/>
         /// </summary>
         /// <returns></returns>
-        public static byte GetRandomByte() => CreateRandom(8, x => x[0]);
+        public static byte GetRandomByte() => CreateRandom(x => x[0]);
         /// <summary>
         /// Generates a random <see cref="UInt16"/>
         /// </summary>
         /// <returns></returns>
-        public static ushort GetRandomUnsignedShort() => CreateRandom(8, x => BitConverter.ToUInt16(x, 0));
+        public static ushort GetRandomUnsignedShort() => CreateRandom(x => BitConverter.ToUInt16(x, 0));
         /// <summary>
         /// Generates a random <see cref="UInt32"/>
         /// </summary>
         /// <returns></returns>
-        public static uint GetRandomUnsignedInt() => CreateRandom(8, x => BitConverter.ToUInt32(x, 0));
+        public static uint GetRandomUnsignedInt() => CreateRandom(x => BitConverter.ToUInt32(x, 0));
         /// <summary>
         /// Generates a random <see cref="UInt64"/>
         /// </summary>
         /// <returns></returns>
-        public static ulong GetRandomUnsignedLong() => CreateRandom(8, x => BitConverter.ToUInt64(x, 0));
+        public static ulong GetRandomUnsignedLong() => CreateRandom(x => BitConverter.ToUInt64(x, 0));
         /// <summary>
         /// Generates a random <see cref="float"/>
         /// </summary>
         /// <returns></returns>
-        public static float GetRandomFloat() => CreateRandom(8, x => BitConverter.ToSingle(x, 0));
+        public static float GetRandomFloat() => CreateRandom(x => BitConverter.ToSingle(x, 0));
         /// <summary>
         /// Generates a random <see cref="double"/>
         /// </summary>
         /// <returns></returns>
-        public static double GetRandomDouble() => CreateRandom(8, x => BitConverter.ToDouble(x, 0));
+        public static double GetRandomDouble() => CreateRandom(x => BitConverter.ToDouble(x, 0));
         /// <summary>
         /// Generates a random <see cref="decimal"/>
         /// </summary>
@@ -269,7 +269,7 @@ namespace SFX.Random.CSharp
             new RNGCryptoServiceProvider();
         private static SpinLock _lock = new SpinLock();
         private static byte[] _data = new byte[8];
-        private static T CreateRandom<T>(int size, Func<byte[], T> converter)
+        private static T CreateRandom<T>(Func<byte[], T> converter)
         {
             bool lockTaken = false;
             try
