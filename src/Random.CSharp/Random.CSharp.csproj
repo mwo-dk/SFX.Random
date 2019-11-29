@@ -6,7 +6,7 @@
     <RootNamespace>SFX.Random.CSharp</RootNamespace>
 
     <PackageId>SFX.Random.CSharp</PackageId>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <IsPackable>true</IsPackable>
 
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -17,9 +17,14 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/mwo-dk/SFX.Random</PackageProjectUrl>
     <RepositoryUrl>https://github.com/mwo-dk/SFX.Random</RepositoryUrl>
+    <PackageIcon>dingir.png</PackageIcon>
     <PackageTags>RNGCryptoServiceProvider C#</PackageTags>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="dingir.png" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+  
   <ItemGroup>
     <PackageReference Include="System.Memory" Version="4.5.3" />
   </ItemGroup>

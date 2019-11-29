@@ -6,7 +6,7 @@
     <RootNamespace>SFX.Random</RootNamespace>
 
     <PackageId>SFX.Random</PackageId>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <IsPackable>true</IsPackable>
 
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -17,11 +17,16 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/mwo-dk/SFX.Random</PackageProjectUrl>
     <RepositoryUrl>https://github.com/mwo-dk/SFX.Random</RepositoryUrl>
+    <PackageIcon>dingir.png</PackageIcon>
     <PackageTags>RNGCryptoServiceProvider F#</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Include="Library.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="dingir.png" Pack="true" PackagePath="\"/>
   </ItemGroup>
 
   <ItemGroup>
