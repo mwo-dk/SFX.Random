@@ -6,7 +6,7 @@
     <RootNamespace>SFX.Random</RootNamespace>
 
     <PackageId>SFX.Random</PackageId>
-    <Version>1.0.3</Version>
+    <Version>1.0.4</Version>
     <IsPackable>true</IsPackable>
 
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
