@@ -11,6 +11,7 @@ Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Random", "src\Random\Random
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".solution", ".solution", "{04252CA2-AB8F-4BF9-B581-B31DDD5268E7}"
 	ProjectSection(SolutionItems) = preProject
+		src\Directory.Build.props = src\Directory.Build.props
 		.github\workflows\dotnetcore.yml = .github\workflows\dotnetcore.yml
 		README.md = README.md
 	EndProjectSection
