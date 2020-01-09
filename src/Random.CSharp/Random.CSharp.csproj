@@ -9,23 +9,8 @@
     <Version>$(Version)</Version>
     <FileVersion>$(Version)</FileVersion>
     <AssemblyVersion>$(Version)</AssemblyVersion>
-    <IsPackable>true</IsPackable>
-
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <Authors>Michael W. Olesen</Authors>
-    <Company>-</Company>
-    <Description>A small utilizing RNGCryptoServiceProvider as a standard random generator</Description>
-    <Copyright>Michael W. Olesen</Copyright>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/mwo-dk/SFX.Random</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/mwo-dk/SFX.Random</RepositoryUrl>
-    <PackageIcon>dingir.png</PackageIcon>
-    <PackageTags>random RNGCryptoServiceProvider C#</PackageTags>
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Include="dingir.png" Pack="true" PackagePath="\"/>
-  </ItemGroup>
   
   <ItemGroup>
     <PackageReference Include="System.Memory" Version="4.5.3" />
